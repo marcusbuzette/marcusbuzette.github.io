@@ -7,6 +7,7 @@ class InitScene {
     buttons.push(new Button('Ranking', width/2 , height/2 + 75, 'scoreboard'))
     buttons.push(new Button('Controles', width/2 , height/2 + 150, 'controls'))
     buttons.push(new Button('Creditos', width/2 , height/2 + 225, 'credits'))
+    soundTrack.stop()
     soundTrack.loop()
   }
   
