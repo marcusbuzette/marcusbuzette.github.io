@@ -159,7 +159,7 @@ class Character extends RigidBody {
         this.applyGravity = false;
       if (obj.alive) {
 
-        if (killEnemy(charCollider[3].x,charCollider[3].y,objCollider[0].x,objCollider[0].y, obj.bodyW, obj.bodyH * 0.3)) {
+        if (killEnemy(charCollider[3].x,charCollider[3].y,objCollider[0].x,objCollider[0].y, obj.bodyW, obj.bodyH * 0.5)) {
           return 'kill';
         } else {
           return 'dead';
@@ -176,9 +176,10 @@ class Character extends RigidBody {
 }
 
 function killEnemy (charBottomX, charBottomY,objTopX, objTopY, objTopW, trashold) {
-  let newX = objTopX  + (objTopW - (objTopW*0.8))/2
+  // let newX = objTopX  + (objTopW - (objTopW*0.8))/2
+  let newX = objTopX 
   if ((charBottomY <= objTopY + trashold) &&
-     (charBottomX >= newX && charBottomX <= newX + objTopW*0.8 ) ) {
+     (charBottomX >= newX && charBottomX <= newX + objTopW ) ) {
     this.posY = objTopY + this.bodyH;
     return true;
   } else {
