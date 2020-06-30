@@ -38,7 +38,7 @@ let delayPlat = 0;
 // let platform;
 
 const FLOOR_LEVEL = 30
-const DELAY_ENEMY_MIN = 10;
+const DELAY_ENEMY_MIN = 50;
 const DELAY_ENEMY_MAX = 200;
 const DELAY_PLAT_MIN = 200;
 const DELAY_PLAT_MAX = 400;
