@@ -27,8 +27,8 @@ class GameOver {
 			text('Informe seu apelido para salvar sua colocacao', width/2, 450)
 			textSize(50)
 			input = createInput();
-  			input.position(width/3, 490);
-  			submit = createButton('Enviar')
+			input.position(width/3, 490);
+			submit = createButton('Enviar')
 			submit.addClass('botao-tela-inicial');
 			submit.position(width/3 + 200, 470);
 		} else {
@@ -56,14 +56,17 @@ class GameOver {
 	}
 
 	_btns() {
-	    buttons.forEach(btn => {
-	      btn.draw();
-	    })
+		buttons.forEach(btn => {
+			btn.draw();
+		})
 	}
 
 	keyPressed(key) {
 		if (!this.newRecord) {
 			if (key === 'r') {
+				buttons.forEach(bt => {
+					bt.btn.remove()
+				})
 				game.setup();
 				preGame.setup();
 				GAME_STATUS = PRE_GAME
