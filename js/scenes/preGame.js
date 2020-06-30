@@ -11,6 +11,7 @@ class PreGame {
     character = character = new Character(charSheet, 270, 220, 4, 4, 16, 0, 0, 135, 110, FLOOR_LEVEL, charPoly);
     scenario = new Scenario(bg1, [3, 6, 9, 12, 15], bg2, bg3, bg4);
     enemyWall = new EnemyWall(100)
+    musicGame.stop()
     musicGame.loop()
   }
   
